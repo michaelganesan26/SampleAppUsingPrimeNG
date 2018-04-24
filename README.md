@@ -28,3 +28,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 #Notes
 Import this branch to create a new version of app using webpack and primeNG (04/14/2018)
+
+#CSS using SASS
+Include the following code into your main.ts
+Sample Code
+ import './assets/css/main.scss' => Webpack will automatically create a link in index.html 
+ and add a link to this file main.css 
+
+
+
+
