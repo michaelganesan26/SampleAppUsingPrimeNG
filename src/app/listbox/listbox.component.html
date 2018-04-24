@@ -1,0 +1,15 @@
+<div class="ui-g">
+    <div class="ui-g-6">
+        <label for="select1">
+            <strong>Cities:</strong>
+        </label>
+        <p-listbox #select1 filter="filter" [options]="cities1" [(ngModel)]="selectedCity1" (onDblClick)="selectButton($event)" (onChange)="onSelectChange($event)"></p-listbox>
+    </div>
+    <div class="ui-g-6">
+
+        <p-listbox #data1 [options]="cities2" [(ngModel)]="selectedCity2" optionLabel="name"></p-listbox>
+    </div>
+    <div class="ui-g-4">
+        <button #btnCheckData>Test Button</button>
+    </div>
+</div>

@@ -1,8 +1,8 @@
-@mixin boxcolor($color:#a361ff,$borderThickness:1px){
-    border-top: $borderThickness solid $color;
-    border-left: $borderThickness solid $color;
-    border-right: $borderThickness solid $color;
-    border-bottom: $borderThickness solid $color;
+@mixin boxcolor($color:#a361ff,$borderThickness:1px,$borderColor:#ffffff){
+    border-top: $borderThickness solid $borderColor;
+    border-left: $borderThickness solid $borderColor;
+    border-right: $borderThickness solid $borderColor;
+    border-bottom: $borderThickness solid $borderColor;
     background-color: $color;
     
 }
@@ -13,27 +13,29 @@ $cyan: #61ffe7;
 $lightViolet: #ff3dff;
 $green: #3dff9e;
 $solidBorder: 1px;
-
+$borderColor: #ffffff;
 
 .greenbox{
- @include boxcolor($green,$solidBorder);
+ @include boxcolor($green,$solidBorder,$borderColor);
 }
 
 .bluebox{
-   @include boxcolor($blue,$solidBorder);
+   @include boxcolor($blue,$solidBorder,$borderColor);
 }
 
 .cyanbox{
-    @include boxcolor($cyan,$solidBorder);
+    @include boxcolor($cyan,$solidBorder,$borderColor);
  }
  
  .violetbox{
-    @include boxcolor($violet,$solidBorder);
+    @include boxcolor($violet,$solidBorder,$borderColor);
  }
  
  .lightvioletbox{
-    @include boxcolor($lightViolet,$solidBorder);
+    @include boxcolor($lightViolet,$solidBorder,$borderColor);
  }
+
+
  
 
 
