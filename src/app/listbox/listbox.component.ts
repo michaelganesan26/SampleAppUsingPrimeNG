@@ -56,10 +56,8 @@ export class ListboxComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   onSelectChange(event:any){
-
      console.log('Change event from select');
      this.displayData();
-
 
   }
 

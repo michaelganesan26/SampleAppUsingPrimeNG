@@ -1,3 +1,4 @@
+import { HeroesService } from './service/heroes.service';
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
@@ -10,12 +11,16 @@ import { ListboxComponent } from './listbox/listbox.component';
 import { ListboxModule } from 'primeng/listbox';
 import { CalendarModule } from 'primeng/calendar';
 import { FormsModule } from '@angular/forms';
+import { AnimatedbuttonComponent } from './animatedbutton/animatedbutton.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListboxComponent
+    ListboxComponent,
+    AnimatedbuttonComponent
+   
   ],
   imports: [
     BrowserModule,
@@ -24,7 +29,7 @@ import { FormsModule } from '@angular/forms';
     ListboxModule
 
   ],
-  providers: [],
+  providers: [HeroesService],
   bootstrap: [ListboxComponent]
 })
 export class AppModule { }

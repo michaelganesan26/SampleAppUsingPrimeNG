@@ -1,0 +1,11 @@
+<div>
+  <p [@animateString]="textStringState">Hello</p>
+  <button  (click)="toggleState($event)">
+    Toggle Button</button>
+</div>
+<h3>List of heros</h3>
+<ul>
+  <li *ngFor="let hero of heroes;let i=index">
+    {{hero.name}}
+  </li>
+</ul>
