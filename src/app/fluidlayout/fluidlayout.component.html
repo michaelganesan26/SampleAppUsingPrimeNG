@@ -1,0 +1,44 @@
+<div class="ui-fluid ui-corner-all">
+  <div class="ui-g">
+    <div class="ui-g ui-g-12 ui-md-6 ui-g-nopad">
+      <div class="ui-g-12 ui-md-3 ui-label">
+        Passenger
+      </div>
+      <div class="ui-g-12 ui-md-9">
+        <input pInputText type="text"/>
+       
+      </div>
+    </div>
+    <div class="ui-g ui-g-12 ui-md-6 ui-g-nopad">
+      <div class="ui-g-12 ui-md-3 ui-label">
+        Flight day
+      </div>
+      <div class="ui-g-12 ui-md-9">
+        <div class="ui-g-6 ui-md-6">
+            <p-calendar [(ngModel)]="currentDate" [showIcon]="true">
+              </p-calendar>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+  <div class="ui-g">
+    <div class="ui-g ui-g-12 ui-md-6 ui-g-nopad">
+      <div class="ui-g-12 ui-md-3 ui-label">
+        Notice
+      </div>
+      <div class="ui-g-12 ui-md-9">
+        <textarea pInputTextarea type="text"></textarea>
+      </div>
+    </div>
+    <div class="ui-g ui-g-12 ui-md-6 ui-g-nopad">
+      <div class="ui-g-12 ui-md-3 ui-label">
+        Destination
+      </div>
+      <div class="ui-g-12 ui-md-9">
+        <p-listbox [options]="cities" [(ngModel)]="selectedCity" optionLabel="name">
+        </p-listbox>
+      </div>
+    </div>
+  </div>
+</div>

@@ -53,10 +53,13 @@
   <div class="ui-g-12 ui-md-6 ui-l-2 greenbox">ui-g-12 ui-md-6 ui-l-2</div>
   <div class="ui-g-12 ui-md-6 ui-l-2 violetbox">ui-g-12 ui-md-6 ui-l-2</div>
   <div class="ui-g-12 ui-md-4 ui-l-8 cyanbox">ui-g-12 ui-md-4 ui-l-8</div>
-
-  <div></div>
-  <div></div>
-
-
-
+</div>
+<div>
+  <h3>Form Controls</h3>
+  <label for="testData">Testing FormControl</label>
+  <input [formControl]="name">
+  <div>
+    <p>The value of the formcontrol</p>
+    Your input box value: {{name.value}}
+  </div>
 </div>

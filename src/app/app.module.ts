@@ -10,8 +10,9 @@ import { ListboxComponent } from './listbox/listbox.component';
 //import primeng
 import { ListboxModule } from 'primeng/listbox';
 import { CalendarModule } from 'primeng/calendar';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AnimatedbuttonComponent } from './animatedbutton/animatedbutton.component';
+import { FluidlayoutComponent } from './fluidlayout/fluidlayout.component';
 
 
 
@@ -19,17 +20,20 @@ import { AnimatedbuttonComponent } from './animatedbutton/animatedbutton.compone
   declarations: [
     AppComponent,
     ListboxComponent,
-    AnimatedbuttonComponent
+    AnimatedbuttonComponent,
+    FluidlayoutComponent
    
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
-    ListboxModule
+    ListboxModule,
+    CalendarModule
 
   ],
   providers: [HeroesService],
-  bootstrap: [ListboxComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
