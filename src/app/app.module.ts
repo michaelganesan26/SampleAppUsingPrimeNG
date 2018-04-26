@@ -1,6 +1,7 @@
+import { MessageService } from 'primeng/components/common/messageservice';
 import { HeroesService } from './service/heroes.service';
 import { BrowserModule } from '@angular/platform-browser';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 
@@ -13,7 +14,9 @@ import { CalendarModule } from 'primeng/calendar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AnimatedbuttonComponent } from './animatedbutton/animatedbutton.component';
 import { FluidlayoutComponent } from './fluidlayout/fluidlayout.component';
-
+import { UserInputComponent } from './user-input/user-input.component';
+import { InputMaskModule } from 'primeng/inputmask';
+import { GrowlModule } from 'primeng/growl';
 
 
 @NgModule({
@@ -21,8 +24,9 @@ import { FluidlayoutComponent } from './fluidlayout/fluidlayout.component';
     AppComponent,
     ListboxComponent,
     AnimatedbuttonComponent,
-    FluidlayoutComponent
-   
+    FluidlayoutComponent,
+    UserInputComponent
+
   ],
   imports: [
     BrowserModule,
@@ -30,10 +34,12 @@ import { FluidlayoutComponent } from './fluidlayout/fluidlayout.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     ListboxModule,
-    CalendarModule
+    CalendarModule,
+    InputMaskModule,
+    GrowlModule
 
   ],
-  providers: [HeroesService],
-  bootstrap: [AppComponent]
+  providers: [HeroesService, MessageService],
+  bootstrap: [UserInputComponent]
 })
 export class AppModule { }

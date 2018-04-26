@@ -1,0 +1,21 @@
+<div class="ui-fluid ui-corner-all">
+  <div class='ui-g'>
+    <div class="ui-g-4 ui-md-4 ui-l-4">
+      <label for="">Please enter {{currentMask}}</label>
+      <p-inputMask 
+      [(ngModel)]="maskValue" 
+      mask="{{currentMask}}" 
+      slotChar=" " 
+      autoClear="true"
+      (onFocus)="maskOnFocus()"
+      (onComplete)="maskComplete()"></p-inputMask>
+    </div>
+    <div class="ui-g-8 ui-md-4 ui-l-4">
+        {{maskCompleteMessage}}
+    </div>
+  </div>
+  <div>
+    <p-growl [(value)]="msgs" sticky="true"></p-growl>
+  </div>
+
+</div>

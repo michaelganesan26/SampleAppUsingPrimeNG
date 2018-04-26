@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Calendar } from 'primeng/calendar';
-import {} from 'primeng/api';
 import { Listbox } from 'primeng/listbox';
 import {InputText} from 'primeng/inputtext'
 import { City } from '../utilities/variables';
